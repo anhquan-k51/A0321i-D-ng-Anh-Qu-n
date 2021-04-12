@@ -5,13 +5,14 @@
     <title>Title</title>
 </head>
 <body>
-<h2 id="total"></h2>
-
-</body>
-</html>
+<p id="result">Xuất kết quả</p>
+<button onclick="total(5,8)">Tính Tổng</button>
 <script>
-    var a = 2 ;
-    var b = 3 ;
-    var total = a+b ;
-    document.getElementById("total").innerHTML = total;
+ function total(a,b) {
+     document.getElementById('result').innerHTML = a + b ;
+
+ }
 </script>
+</body>
+
+</html>
