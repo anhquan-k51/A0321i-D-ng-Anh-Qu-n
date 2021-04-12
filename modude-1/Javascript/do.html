@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<select id="Myselect" onchange="do_something()">
+    <option value="Audi">Audi</option>
+    <option value="BMW">BMW</option>
+    <option value="Lamboghini">Lamboghini</option>
+    <option value="Posches">Posches</option>
+
+</select>
+<script>
+    function do_something() {
+        var selectvalue = document.getElementById("Myselect").value;
+        alert(selectvalue);
+
+    }
+</script>
 </body>
 </html>
