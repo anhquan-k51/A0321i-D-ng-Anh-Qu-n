@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vua tien te</title>
+</head>
+<body>
+<input type="text" id="dauvao">
+<select name="" id="select1">
+    <option value="a">USD</option>
+
+
+</select>
+<select name="" id="select2">
+    <option value="b">VND</option>
+</select>
+<button onclick="chuyendoi()" >Convert</button>
+<div id="show"></div>
+<script>
+
+    function chuyendoi() {
+
+        let giatri = document.getElementById("dauvao").value;
+        let ketqua = giatri * 24000;
+        document.getElementById('show').innerHTML= "ket qua = " + ketqua;
+
+    }
+
+</script>
+
+</body>
+</html>
