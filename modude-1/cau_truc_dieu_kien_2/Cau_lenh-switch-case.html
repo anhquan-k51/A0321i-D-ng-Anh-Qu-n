@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu lệnh switch-care</title>
+</head>
+<body>
+
+<form action="">
+    <input type="number">
+   <button id="so ngay" onclick="chuyendoi()">Tính số ngày</button>
+    <div id="show"></div>
+</form>
+    <script>
+   // let ngay = document.getElementById("nhap so:");
+function chuyendoi() {
+    let ngay = document.getElementById("so ngay").innerHTML = 'Tháng 2 có 28 ngày hoặc 29 ngày'
+}
+  switch (ngay) {
+       case 1: document.write(ngay);
+       ('Tháng 1 có 31 ngày'); break ;
+       case 2: document.write('Tháng 2 có 28 ngày hoặc 29 ngày'); break ;
+       case 3: document.write('Tháng 2 có 31 ngày'); break ;
+   }
+
+
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+

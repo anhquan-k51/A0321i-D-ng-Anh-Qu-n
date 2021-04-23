@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Chi so can nang</title>
+
+</head>
+<body>
+ <script>
+     let weight = parseInt(prompt("nhap so can nang."));
+     let height = parseInt(prompt("nhap chieu cao."));
+     let bmi = weight / ( height ^ 2 );
+     if (bmi < 18)
+         document.write("Underweight");
+     else if (18.5 <= bmi <= 25.0)
+         document.write("Normal");
+     else if ( 25.0 <= bmi <= 30.0)
+         document.write("Overweight");
+     else
+         document.write("Obese");
+
+
+ </script>
+</body>
+</html>

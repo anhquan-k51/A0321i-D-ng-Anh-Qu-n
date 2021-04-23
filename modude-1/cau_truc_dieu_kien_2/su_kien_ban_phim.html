@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sự kiện bàn phím </title>
+</head>
+<body onload="docReady()">
+<img id="nobita" src="images/11.png" style="position: absolute;left:0;top:0;" height="235" width="215"/>
+<script>
+    function upArrowPressed() {
+        let element = document.getElementById("nobita");
+        element.style.top = parseInt(element.style.top) - 5 + 'px';
+
+    }
+
+    function downArrowPressed() {
+        var element = document.getElementById("nobita")
+        element.style.top = parseInt(element.style.top) + 5 + 'px';
+
+
+    }
+
+    function leftArrowPressed() {
+        var element = document.getElementById("nobita");
+        element.style.left = parseInt(element.style.left) - 5 + 'px';
+
+
+    }
+
+    function rightArrowPressed() {
+        var element = document.getElementById("nobita");
+        element.style.left = parseInt(element.style.left) + 5 + 'px';
+
+    }
+
+    function moveSelection(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                leftArrowPressed();
+                break;
+            case 39:
+                rightArrowPressed();
+                break;
+            case 38:
+                upArrowPressed();
+                break;
+            case 40:
+                downArrowPressed();
+                break;
+        }
+    }
+
+</script>
+<br>
+<br>
+
+
+<img id="xuka" src="images/xuka-105625070.jpg" style="position: absolute;left:0;top:0;" height="200" width="190"/>
+<script>
+    function upArrowPressed() {
+        let element = document.getElementById("xuka");
+        element.style.top = parseInt(element.style.top) - 5 + 'px';
+
+    }
+
+    function downArrowPressed() {
+        var element = document.getElementById("xuka")
+        element.style.top = parseInt(element.style.top) + 5 + 'px';
+
+
+    }
+
+    function leftArrowPressed() {
+        var element = document.getElementById("xuka");
+        element.style.left = parseInt(element.style.left) - 5 + 'px';
+
+
+    }
+
+    function rightArrowPressed() {
+        var element = document.getElementById("xuka");
+        element.style.left = parseInt(element.style.left) + 5 + 'px';
+
+    }
+
+    function upArrowPressed1() {
+        let element = document.getElementById("nobita");
+        element.style.top = parseInt(element.style.top) - 5 + 'px';
+
+    }
+
+    function downArrowPressed1() {
+        var element = document.getElementById("nobita")
+        element.style.top = parseInt(element.style.top) + 5 + 'px';
+
+
+    }
+
+    function leftArrowPressed1() {
+        var element = document.getElementById("nobita");
+        element.style.left = parseInt(element.style.left) - 5 + 'px';
+
+
+    }
+
+    function rightArrowPressed1() {
+        var element = document.getElementById("nobita");
+        element.style.left = parseInt(element.style.left) + 5 + 'px';
+
+    }
+
+    function moveSelection(evt) {
+        switch (evt.keyCode) {
+            case 65:
+                leftArrowPressed();
+                break;
+            case 68:
+                rightArrowPressed();
+                break;
+            case 87:
+                upArrowPressed();
+                break;
+            case 83:
+                downArrowPressed();
+                break;
+            case 37:
+                leftArrowPressed1();
+                break;
+            case 39:
+                rightArrowPressed1();
+                break;
+            case 38:
+                upArrowPressed1();
+                break;
+            case 40:
+                downArrowPressed1();
+                break;
+            default:
+                console.log(evt.keyCode)
+        }
+    }
+
+    function docReady() {
+        window.addEventListener('keydown', moveSelection);
+    }
+</script>
+
+</body>
+</html>
