@@ -5,11 +5,23 @@
     <title>Title</title>
 </head>
 <body>
+<table border="1" >
+    <tr>
+        <td width="20" height="20"></td>
+        <td width="20" height="20"></td>
+    </tr>
+</table>
+<p id="hienthi"></p>
 <script>
-    let city = ["Ha Noi", "Hue", "Da Nang", "Sai Gon"];
-​
-    city[5] = "Vinh";
+    let tableString = '<table boder="1">';
+    for (let i=0 ; i<10;i++){
+        tableString +=' <tr> ';
+        for (let j = 0 ;j < 10 ;i++ );
+         tableString +='<td with= 20 height="20"></td>';
+        tableString +=<'td'>;
+    }
 
+    document.getElementById("hienthi").innerHTML =table
 
 </script>
 </body>
