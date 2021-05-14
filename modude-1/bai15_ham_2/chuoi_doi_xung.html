@@ -5,6 +5,35 @@
     <title>Title</title>
 </head>
 <body>
-
+<script>
+    let a = prompt('Nhập từ cần kiểm tra');
+    function check()
+    {
+        let count  = 0;
+        if(a.length % 2 == 0)
+        {
+            for (let i = 0; i < a.length / 2; i++)
+            {
+                if(a[i] != a[(a.length - 1) - i])
+                {
+                    count++;
+                }
+            }
+        }else {
+            for (let i = 0; i < (a.length - 1) / 2; i++)
+            {
+                if(a[i] != a[(a.length - 1) - i])
+                {
+                    count++;
+                }
+            }
+        }
+        if(count > 0)
+        {
+            alert('Wrong');
+        }else alert('True');
+    }
+    check();
+</script>
 </body>
 </html>
