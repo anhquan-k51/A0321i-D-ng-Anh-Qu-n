@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function songuyento(){
+        let m = parseInt(prompt('Nhập chiều ngang ma trân'));
+        let n = parseInt(prompt('Nhập chiều dọc ma trận'));
+        var array = [[],[],[],[],[],[],[],[],[]];
+        var sum = 0;
+        for(let i = 1; i <= n; i++)
+        {
+            for(let j = 1; j <= m; j++)
+            {
+                array[i][j] = parseInt(prompt('Nhập giá trị vị trí [' +i+']['+j+']'));
+                let count = 0;
+                if(array[i][j] >=2)
+                {
+                    for (var l = 2; l <= Math.sqrt(array[i][j]); l++)
+                    {
+
+                        if(array[i][j] % l == 0)
+                        {
+                            count++;
+                        }
+                    }
+                    if(count == 0)
+                    {
+                        document.write(array[i][j] + '&nbsp');
+                        sum++;
+                    }
+                }
+            }
+        }
+        document.write('<br>')
+        document.write('Có '+sum+ ' số nguyên tố');
+    }
+    songuyento();
+</script>
+</body>
+</html>

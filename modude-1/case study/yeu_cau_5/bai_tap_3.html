@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function minmax(){
+        let m = parseInt(prompt('Nhập chiều ngang ma trân'));
+        let n = parseInt(prompt('Nhập chiều dọc ma trận'));
+        var array = [[],[],[],[],[],[],[],[],[]];
+        var min = 1000000;
+        var max = 0;
+        for(let i = 1; i <= n; i++)
+        {
+            for(let j = 1; j <= m; j++)
+            {
+                array[i][j] = parseInt(prompt('Nhập giá trị vị trí [' +i+']['+j+']'));
+                if(array[i][j] > max)
+                {
+                    max = array[i][j];
+                }
+                if(array[i][j] < min)
+                {
+                    min = array[i][j];
+                }
+            }
+        }
+        document.write('Giá trị bé nhất là: ' + min +'<br>'+ 'Giá trị lớn nhất là: ' + max);
+    }
+    minmax();
+</script>
+</body>
+</html>

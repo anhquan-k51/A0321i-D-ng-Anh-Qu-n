@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function tinhtong()
+    {
+        let m = parseInt(prompt('Nhập chiều ngang ma trân'));
+        let n = parseInt(prompt('Nhập chiều dọc ma trận'));
+        let array = [[],[],[],[],[],[],[],[],[]];
+        let sum = 0;
+        for(let i = 1; i <= n; i++)
+        {
+            for(let j = 1; j <= m; j++)
+            {
+                array[i][j] = parseInt(prompt('Nhập giá trị vị trí [' +i+']['+j+']'));
+                document.write(array[i][j] + '&nbsp;&nbsp;');
+                if(array[i][j] % 2 == 0)
+                {
+                    sum += array[i][j];
+                }
+            }
+            document.write('<br>')
+        }
+        document.write('Tổng bằng: '+sum);
+    }
+    tinhtong();
+</script>
+</body>
+</html>

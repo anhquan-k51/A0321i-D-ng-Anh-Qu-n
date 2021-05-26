@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function phanso(tu,mau){
+        let max = tu[0]/mau[0];
+        for (let i = 1;i < tu.length; i++)
+        {
+            if((tu[i-1]/mau[i-1]) < (tu[i]/mau[i]))
+            {
+                max = tu[i]/mau[i];
+                var a = tu[i];
+                var b = mau[i];
+                var c = mau.indexOf(mau[i]);
+            }
+        }
+        document.write('Phân số đó là: ' + a +'/'+ b + ' và ở vị trí thứ ' + (c+1));
+    }
+    phanso([5,2,5],[6,3,4]);
+</body>
+</html>
