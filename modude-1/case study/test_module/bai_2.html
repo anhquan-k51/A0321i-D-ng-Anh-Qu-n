@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let a = parseInt(prompt('Nhập một số nguyên dương'));
+    function checknguyenduong(){
+        while (a < 0)
+        {
+            a = parseInt(prompt('Mời nhập lại số nguyên dương'));
+        }
+    }
+    function check()
+    {
+        let sum = 0;
+        for (let i = 1; i <= (a/2); i++)
+        {
+            if(a % i == 0)
+            {
+                sum += i;
+            }
+        }
+        if(sum == a)
+        {
+            alert('True');
+        }else alert('False');
+    }
+    checknguyenduong();
+    check();
+</script>
+
+</body>
+</html>
