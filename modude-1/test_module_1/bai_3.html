@@ -2,9 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>bai_3</title>
 </head>
 <body>
-$END$
+<script>
+    let a,year;
+    a = parseInt(prompt("Nhập tháng :"));
+
+    while(a < 1 || a > 12)
+    {
+        if (a < 1 || a > 12)
+            alert("Bạn đã nhập sai tháng, hãy nhập lại");
+        a = parseInt(prompt("Nhập tháng :"));
+    }
+
+    year = parseInt(prompt("Nhập năm :"));
+
+    function tinhNgay(a)
+    {
+        switch (a)
+        {
+            case 4 :case 6 :case 9 :case 11 :
+            alert('tháng ' + a + " năm "+ year +" có 30 ngày");
+            break;
+
+            case 1 : case 3 :case 5 :case 7 :case 8 :case 10 :case 12:
+            alert('tháng ' + a + " năm "+ year +" có 31 ngày");
+            break;
+
+        }
+        if(a == 2)
+        {
+            if(year %4 == 0 && year %100 != 0)
+                alert("Tháng 2 năm "+ year + " có 29 ngày");
+            else
+                alert("Tháng 2 năm "+ year + " có 28 ngày");
+        }
+    }
+
+    tinhNgay(a);
+</script>
 </body>
 </html>

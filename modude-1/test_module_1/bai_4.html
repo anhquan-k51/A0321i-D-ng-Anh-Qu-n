@@ -4,124 +4,105 @@
     <meta charset="UTF-8">
     <title>bai_3</title>
 </head>
+<style>
+    h1{
+        display: inline;
+        margin-left: 630px;
+    }
+    div,td{
+        margin: 30px;
+    }
+    table{
+        margin-left: 550px;
+    }
+
+</style>
 <body>
-<button onclick="addNewStudent()">Thêm mới</button>
+
+<h1>Quản lý công nhân</h1>
 <p id="ketQua"></p>
 <script>
-    class Student {
-        constructor(id, name, age) {
-            this.id = id;
-            this.name = name;
-            this.age = age;
+    class Congnhan {
+        constructor(hovaten, ngaysinh, diachi, luong, chucvu) {
+            this.hovaten = hovaten;
+            this.ngaysinh = ngaysinh;
+            this.diachi = diachi;
+            this.luong = luong;
+            this.chucvu = chucvu;
         }
 
-        setId(id) {
-            this.id = id;
+        setTen(hovaten) {
+            this.hovaten = hovaten;
         }
 
-        setName(name) {
-            this.name = name;
+        setSN(ngaysinh){
+            this.ngaysinh = ngaysinh;
         }
 
-        setAge(age) {
-            this.age = age;
+        setDiachi(diachi){
+            this.diachi = diachi;
         }
 
-        getId() {
-            return this.id;
+        setLuong(luong){
+            this.luong = luong;
         }
 
-        getName() {
-            return this.name;
+        setChucvu(chucvu){
+            this.chucvu = chucvu;
         }
 
-        getAge() {
-            return this.age;
+        getTen(){
+            return this.hovaten;
         }
 
-        toString() {
-            return "1." + this.id + "\n2." + this.name + "\n3." + this.age;
+        getSN(){
+            return this.ngaysinh;
         }
-    }
 
-    let listStudent = [];
-    listStudent.push(new Student(1, "nguyễn văn A", 18));
-    listStudent.push(new Student(2, "nguyễn văn b", 18));
-    listStudent.push(new Student(3, "nguyễn văn c", 18));
-    listStudent.push(new Student(4, "nguyễn văn d", 18));
-    listStudent.push(new Student(5, "nguyễn văn e", 18));
-
-    display(listStudent);
-
-    function addNewStudent() {
-        let id = prompt("input Id");
-        let name = prompt("input name");
-        let age = prompt("input age");
-        let student = new Student(id, name, age);
-        listStudent.push(student);
-        display(listStudent)
-    }
-
-    function deleteStudent(index) {
-        let conf = confirm("bạn có muốn xóa sinh viên: " + listStudent[index].getName());
-        if (conf) {
-            listStudent.splice(index, 1);
+        getDiaChi(){
+            return this.diachi;
         }
-        display(listStudent);
-    }
 
-    function editStudent(index) {
-        let check = true;
-        while (check) {
-            let choose = prompt("Chọn thuộc tính cấn sửa\n+" +
-                "1.ID\n" +
-                "2.Name\n" +
-                "3.Age\n" +
-                "4.Exit");
-            switch (choose) {
-                case "1":
-                    let idNew = prompt("nhập id mới");
-                    listStudent[index].setId(idNew);
-                    break;
-                case "2":
-                    let nameNeW = prompt("nhập name mới");
-                    listStudent[index].setName(nameNeW);
-                    break;
-                case "3":
-                    let ageNew = prompt("nhập tuổi mới");
-                    listStudent[index].setAge(ageNew);
-                    break;
-                default:
-                    check =false;
-            }
+        getLuong(){
+            return this.luong;
         }
-        display(listStudent);
+
+        getChucvu(){
+            return this.chucvu;
+        }
+
     }
 
     function display(list) {
         let tableString = '<table border="1">\n' +
-            '    <tr>\n' +
-            '        <td>STT</td>\n' +
-            '        <td>ID</td>\n' +
-            '        <td>Name</td>\n' +
-            '        <td>Age</td>\n' +
-            '<td>edit</td> ' +
-            '<td>delete</td> ';
-        '    </tr>';
+            '<tr>\n' +
+            '<td>STT</td>\n' +
+            '<td>Họ và tên</td>\n' +
+            '<td>Ngày sinh</td>\n' +
+            '<td>Địa chỉ</td>\n' +
+            '<td>Lương</td> ' +
+            '<td>Chức vụ</td> '
+        '</tr>';
         for (let i = 0; i < list.length; i++) {
             tableString += ' <tr>\n' +
-                '        <td>' + (1 + i) + '</td>\n' +
-                '        <td>' + list[i].getId() + '</td>\n' +
-                '        <td>' + list[i].getName() + '</td>\n' +
-                '        <td>' + list[i].getAge() + '</td>\n' +
-                '<td><input type="button" value="edit" onclick="editStudent(' + i + ')"></td>' +
-                '<td><input type="button" value="delete" onclick="deleteStudent(' + i + ')"></td>' +
+                '<td>' + (1 + i) + '</td>\n' +
+                '<td>' + list[i].getTen() + '</td>\n' +
+                '<td>' + list[i].getSN() + '</td>\n' +
+                '<td>' + list[i].getDiaChi() + '</td>\n' +
+                '<td>' + list[i].getLuong() + '</td>\n' +
+                '<td>' + list[i].getChucvu()+ '</td>\n' +
                 '    </tr>';
         }
         tableString += "</table>";
 
         document.getElementById("ketQua").innerHTML = tableString;
     }
+
+    let listcongnhan = [];
+    listcongnhan.push(new Congnhan("Trương Tấn A", "11-11-1997",'Quảng Nam', "2000", "Abc"));
+    listcongnhan.push(new Congnhan("Trương Tấn B", "11-11-1998",'Đà Nẵng', "2000", "Abc"));
+    listcongnhan.push(new Congnhan("Trương Tấn C", "11-11-1999",'Huế', "2000", "Abc"));
+    display(listcongnhan);
 </script>
 </body>
 </html>

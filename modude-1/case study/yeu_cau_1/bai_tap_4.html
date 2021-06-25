@@ -6,20 +6,26 @@
 </head>
 <body>
 <script>
-    for (let i = 1; i <= 5; i++) {
-        for (let j = 1; j <= 9; j++) {
-            if ((i == 1 && j ==5) ||
-                (i == 2 && (j == 4 || j == 6)) ||
-                (i == 3 && (j == 3 || j == 7)) ||
-                (i == 4 && (j == 2 || j == 8)) ||
-                (i == 5)
-            )
-            {
-                document.write('*');
-            } else document.write('&nbsp;&nbsp;');
+    let height = parseInt(prompt("Please enter height"));
+    let width  = height * 2 -1 ;
+    let shape = " ";
+    for (let i = 1 ;  i <= height ;i++){
+        for (let j = 0; j < width / 2 - i ;j++){
+            shape += "&ensp;"
+        }for (let k = 0; k < i * 2 - 1 ;k++){
+            if (i === height) {
+                shape += "*";
+            }else if (k === 0 || k === i * 2 -2){
+                shape += "*";
+            }else {
+                shape += "&ensp;"
+            }
+
         }
-        document.write('<br>');
+        shape += "<br>";
     }
+    document.write(shape);
+
 </script>
 </body>
 </html>
