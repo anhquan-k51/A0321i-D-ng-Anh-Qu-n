@@ -1,6 +1,8 @@
+package Mang_trong_java.bai_tap;
+
 
 import java.util.Scanner;
-public class gop_mang {
+public class Gop_mang {
 	public static Scanner sc = new Scanner(System.in);
 	
 	public static void ramdom(int a[],int n) {

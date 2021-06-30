@@ -1,25 +1,23 @@
 package Mang_trong_java.thuc_hanh;
 import java.util.Scanner;
 
-public class max {
+public class lnverse {
 	public static void ramdom(int a[],int n) {
 		int i;
 		for(i = 0; i < n; i++)
 			a[i] = (int) (Math.random() * 100);
 	}
 	
-	public static void out(int a[],int n) {
+	public static void disPlay(int a[],int n) {
 		int i;
 		for(i = 0; i < n; i++)
 			System.out.print(a[i]+" ");
 	}
 	
-	public static int timMax(int a[],int n) {
-		int i,max = a[0];
-		for(i = 1; i < n; i++)
-			if(max < a[i]) 
-				max = a[i];
-		return max;
+	public static void inverse(int a[],int n) {
+		int i;
+		for(i = n-1 ; i >= 0; i--)
+			System.out.print(a[i]+" ");
 	}
 	
 	
@@ -29,11 +27,11 @@ public class max {
 		int n = sc.nextInt();
 		int []a = new int [n];
 		
-		System.out.print("\nMang ramdom la\n");
+		System.out.print("Mang ramdom la\n");
 		ramdom(a, n);
-		out(a, n);
+		disPlay(a, n);
+		System.out.print("\nMang dao nguoc\n");
+		inverse(a, n);
 		
-		System.out.print("\n\nSo lon nhat la : "+ timMax(a, n));
-	}
-
+}
 }
